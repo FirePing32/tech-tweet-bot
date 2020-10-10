@@ -4,7 +4,7 @@ Tweet cool articles from HackerNews API every 2 hours. <br>
 
 ## Configuration
 
-Set the following variables before running the bot. 
+Set the following variables in `api.py` before running the bot. 
 
 `x-rapidapi-host` <br>
 `x-rapidapi-key` <br>
