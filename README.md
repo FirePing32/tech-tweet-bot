@@ -1,7 +1,7 @@
 # [@TechTweetBot](https://twitter.com/TechTweetBot)
 
-_Tweet new stories from HackerNews every 2 hours._<br>
-A cron job is setup using GitHub actions to run the script once in every 2 hours.
+_Tweet new stories from HackerNews every hour._<br>
+A cron job is setup using GitHub actions to run the script once every hour.
 
 ## Configuration
 
