@@ -1,15 +1,12 @@
-# [@TechTweetBot](https://twitter.com/TechTweetBot) <img src="https://www.pinclipart.com/picdir/middle/1-14041_twitter-logo-transparent-background-twitter-logo-clipart.png" width=25>
+# [@TechTweetBot <img src="https://img.icons8.com/color/144/000000/twitter--v1.png" height=35 style="margin-bottom:-7.5px">](https://twitter.com/TechTweetBot)
 
-Tweet cool articles from HackerNews API every 2 hours. <br>
+Tweet cool articles from HackerNews API every 2 hours.
 
 ## Configuration
 
-Set the following variables in `api.py` before running the bot. 
+Set the following variables in `apis.py` before running `bot.py`.
 
-`x-rapidapi-host` <br>
-`x-rapidapi-key` <br>
-
-`CONSUMER_KEY` <br>
-`CONSUMER_SECRET` <br>
-`ACCESS_KEY` <br>
-`ACCESS_SECRET` <br>
+- `CONSUMER_KEY`
+- `CONSUMER_SECRET`
+- `ACCESS_KEY`
+- `ACCESS_SECRET`
