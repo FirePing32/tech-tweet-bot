@@ -11,13 +11,16 @@ print(id_of_post)
 url = f"https://hacker-news.firebaseio.com/v0/item/{id_of_post}.json?print=pretty"
 
 response = requests.request("GET", url).json()
-title = response['title']
 try:
-    url = response['url']
+    title = response['title']
+    try:
+        url = response['url']
+    except:
+        url = f'https://news.ycombinator.com/item?id={id_of_post}'
+
+    print(title, url)
+
+    tweet = f"{title}\n{url}"
+    api.update_status(tweet)
 except:
-    url = f'https://news.ycombinator.com/item?id={id_of_post}'
-
-print(title, url)
-
-tweet = f"{title}\n{url}"
-api.update_status(tweet)
+    pass
