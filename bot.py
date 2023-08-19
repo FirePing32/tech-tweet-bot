@@ -1,7 +1,6 @@
 import requests
-from apis import ACCESS_KEY, ACCESS_SECRET, auth, api
+from apis import client
 
-auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 querystring = {"print":"pretty"}
 id_list = "https://hacker-news.firebaseio.com/v0/newstories.json"
 response_of_list = requests.request("GET", id_list).json()
@@ -21,6 +20,7 @@ try:
     print(title, url)
 
     tweet = f"{title}\n{url}"
-    api.update_status(tweet)
-except:
-    pass
+    response = client.create_tweet(text=tweet)
+    print(response)
+except Exception as e:
+    print(e)

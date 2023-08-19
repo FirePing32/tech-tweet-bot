@@ -1,10 +1,7 @@
 from os import environ
 import tweepy
 from os.path import join, dirname
-try:
-    from dotenv import load_dotenv
-except ImportError:
-    print("No module named 'google' found")
+from dotenv import load_dotenv
 from os import environ
 
 dotenv_path = join(dirname(__file__), '.env')
@@ -14,6 +11,10 @@ CONSUMER_KEY = environ['CONSUMER_KEY']
 CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
 ACCESS_SECRET = environ['ACCESS_SECRET']
+BEARER_TOKEN = environ['BEARER_TOKEN']
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-api = tweepy.API(auth)
+client = tweepy.Client(consumer_key=CONSUMER_KEY,
+                       consumer_secret=CONSUMER_SECRET,
+                       access_token=ACCESS_KEY,
+                       access_token_secret=ACCESS_SECRET,
+                       bearer_token=BEARER_TOKEN)
